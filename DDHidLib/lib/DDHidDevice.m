@@ -190,7 +190,7 @@
             return [NSArray array];
         
         io_object_t hidDevice;
-        while (hidDevice = IOIteratorNext(hidObjectIterator))
+        while ((hidDevice = IOIteratorNext(hidObjectIterator)))
         {
             [self addDevice: hidDevice
                   withClass: hidClass
