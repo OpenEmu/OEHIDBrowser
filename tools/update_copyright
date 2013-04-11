@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+$VERBOSE = true
+
+require 'optparse'
+require 'ostruct'
+
+$COMMAND = File.basename($0)
+$USAGE = "Usage: #{$COMMAND} [OPTIONS] <header> [<file> ...]"
+def die(s)
+  $stderr.puts s
+  exit 1
+end
+
+options = OpenStruct.new
+options.backup = false
+
+opts = OptionParser.new do |opts|
+  opts.banner = $USAGE
+  opts.separator ""
+  opts.separator "Specific options:"
+
+  opts.on("-b", "--backup", "Create backup files") do
+    options.backup = true
+  end
+  
+  opts.on_tail("-h", "--help", "Show this message") do
+    puts opts
+    exit
+  end
+end
+opts.parse!(ARGV)
+
+if (ARGV.length < 1)
+  $stderr.puts $USAGE
+  exit 1
+end
+
+header_file = ARGV.shift
+header = IO.read(header_file)
+
+ARGV.each do |path|
+  unless path.match(/\.(c|cpp|h|m|mm)$/)
+    $stderr.puts "Skipping #{path}"
+    next
+  end
+
+  File.open(path + ".tmp", "w") do |out_file|
+    File.open(path) do |in_file|
+      in_file.each do |line|
+        if line =~ /^\w*$/
+          out_file.puts header
+          out_file.puts
+          break
+        end
+      end
+      in_file.each do |line|
+        out_file.puts line
+      end
+    end
+  end
+
+  if options.backup
+    File.rename(path, path + ".bak")
+  end
+  File.rename(path + ".tmp", path)
+  $stderr.puts "Fixed #{path}"
+end

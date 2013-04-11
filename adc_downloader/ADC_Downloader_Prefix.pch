@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ADC Downloader' target in the 'ADC Downloader' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

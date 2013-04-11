@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xcodebuild -configuration Release
+hdiutil create -ov -volname 'ADC Downloader' -srcfolder build/Release "$1"

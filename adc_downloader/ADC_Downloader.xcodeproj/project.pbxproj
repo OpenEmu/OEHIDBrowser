@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		556F5C290C8737C400DE73E7 /* AdcDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F5C280C8737C400DE73E7 /* AdcDownloadController.m */; };
+		556F5C600C873D9700DE73E7 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F5C5D0C873D9700DE73E7 /* libcrypto.dylib */; };
+		556F5C610C873D9700DE73E7 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F5C5E0C873D9700DE73E7 /* libcurl.dylib */; };
+		556F5C620C873D9700DE73E7 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F5C5F0C873D9700DE73E7 /* libssl.dylib */; };
+		556F5C6B0C873DDD00DE73E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F5C6A0C873DDD00DE73E7 /* Security.framework */; };
+		556F60170C87630800DE73E7 /* ByteSizeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F60160C87630800DE73E7 /* ByteSizeFormatter.m */; };
+		556F62AF0C885EA100DE73E7 /* DDCurlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62A10C885EA100DE73E7 /* DDCurlConnection.m */; };
+		556F62B00C885EA100DE73E7 /* DDCurlEasy.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62A30C885EA100DE73E7 /* DDCurlEasy.m */; };
+		556F62B10C885EA100DE73E7 /* DDCurlMultipartForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62A50C885EA100DE73E7 /* DDCurlMultipartForm.m */; };
+		556F62B20C885EA100DE73E7 /* DDCurlResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62A70C885EA100DE73E7 /* DDCurlResponse.m */; };
+		556F62B30C885EA100DE73E7 /* DDCurlSlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62A90C885EA100DE73E7 /* DDCurlSlist.m */; };
+		556F62B40C885EA100DE73E7 /* DDMutableCurlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62AC0C885EA100DE73E7 /* DDMutableCurlRequest.m */; };
+		556F62B50C885EA100DE73E7 /* NSString+DDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F62AE0C885EA100DE73E7 /* NSString+DDExtensions.m */; };
+		556F62CE0C8864F700DE73E7 /* versions.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 556F62CD0C8864F700DE73E7 /* versions.xcconfig */; };
+		556F63030C88693200DE73E7 /* JRLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 556F63020C88693200DE73E7 /* JRLog.m */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* ADC_Downloader_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADC_Downloader_Prefix.pch; sourceTree = "<group>"; };
+		556F5C270C8737C400DE73E7 /* AdcDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdcDownloadController.h; sourceTree = "<group>"; };
+		556F5C280C8737C400DE73E7 /* AdcDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdcDownloadController.m; sourceTree = "<group>"; };
+		556F5C5D0C873D9700DE73E7 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
+		556F5C5E0C873D9700DE73E7 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = /usr/lib/libcurl.dylib; sourceTree = "<absolute>"; };
+		556F5C5F0C873D9700DE73E7 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = /usr/lib/libssl.dylib; sourceTree = "<absolute>"; };
+		556F5C6A0C873DDD00DE73E7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		556F60150C87630800DE73E7 /* ByteSizeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ByteSizeFormatter.h; sourceTree = "<group>"; };
+		556F60160C87630800DE73E7 /* ByteSizeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ByteSizeFormatter.m; sourceTree = "<group>"; };
+		556F629F0C885EA100DE73E7 /* DDCurl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurl.h; sourceTree = "<group>"; };
+		556F62A00C885EA100DE73E7 /* DDCurlConnection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurlConnection.h; sourceTree = "<group>"; };
+		556F62A10C885EA100DE73E7 /* DDCurlConnection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCurlConnection.m; sourceTree = "<group>"; };
+		556F62A20C885EA100DE73E7 /* DDCurlEasy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurlEasy.h; sourceTree = "<group>"; };
+		556F62A30C885EA100DE73E7 /* DDCurlEasy.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCurlEasy.m; sourceTree = "<group>"; };
+		556F62A40C885EA100DE73E7 /* DDCurlMultipartForm.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurlMultipartForm.h; sourceTree = "<group>"; };
+		556F62A50C885EA100DE73E7 /* DDCurlMultipartForm.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCurlMultipartForm.m; sourceTree = "<group>"; };
+		556F62A60C885EA100DE73E7 /* DDCurlResponse.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurlResponse.h; sourceTree = "<group>"; };
+		556F62A70C885EA100DE73E7 /* DDCurlResponse.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCurlResponse.m; sourceTree = "<group>"; };
+		556F62A80C885EA100DE73E7 /* DDCurlSlist.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurlSlist.h; sourceTree = "<group>"; };
+		556F62A90C885EA100DE73E7 /* DDCurlSlist.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCurlSlist.m; sourceTree = "<group>"; };
+		556F62AA0C885EA100DE73E7 /* DDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDExtensions.h; sourceTree = "<group>"; };
+		556F62AB0C885EA100DE73E7 /* DDMutableCurlRequest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDMutableCurlRequest.h; sourceTree = "<group>"; };
+		556F62AC0C885EA100DE73E7 /* DDMutableCurlRequest.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDMutableCurlRequest.m; sourceTree = "<group>"; };
+		556F62AD0C885EA100DE73E7 /* NSString+DDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSString+DDExtensions.h"; sourceTree = "<group>"; };
+		556F62AE0C885EA100DE73E7 /* NSString+DDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDExtensions.m"; sourceTree = "<group>"; };
+		556F62CD0C8864F700DE73E7 /* versions.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = versions.xcconfig; sourceTree = "<group>"; };
+		556F63010C88693200DE73E7 /* JRLog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = JRLog.h; sourceTree = "<group>"; };
+		556F63020C88693200DE73E7 /* JRLog.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = JRLog.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* ADC Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADC Downloader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				556F5C610C873D9700DE73E7 /* libcurl.dylib in Frameworks */,
+				556F5C620C873D9700DE73E7 /* libssl.dylib in Frameworks */,
+				556F5C600C873D9700DE73E7 /* libcrypto.dylib in Frameworks */,
+				556F5C6B0C873DDD00DE73E7 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				556F5C270C8737C400DE73E7 /* AdcDownloadController.h */,
+				556F5C280C8737C400DE73E7 /* AdcDownloadController.m */,
+				556F60150C87630800DE73E7 /* ByteSizeFormatter.h */,
+				556F60160C87630800DE73E7 /* ByteSizeFormatter.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				556F5C6A0C873DDD00DE73E7 /* Security.framework */,
+				556F5C5D0C873D9700DE73E7 /* libcrypto.dylib */,
+				556F5C5F0C873D9700DE73E7 /* libssl.dylib */,
+				556F5C5E0C873D9700DE73E7 /* libcurl.dylib */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* ADC Downloader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ADC Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				556F62640C885E7100DE73E7 /* vendor */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "ADC Downloader";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* ADC_Downloader_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				556F62CD0C8864F700DE73E7 /* versions.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		556F62640C885E7100DE73E7 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				556F63000C88693200DE73E7 /* JRLog */,
+				556F629E0C885EA100DE73E7 /* ddcurl */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		556F629E0C885EA100DE73E7 /* ddcurl */ = {
+			isa = PBXGroup;
+			children = (
+				556F629F0C885EA100DE73E7 /* DDCurl.h */,
+				556F62A00C885EA100DE73E7 /* DDCurlConnection.h */,
+				556F62A10C885EA100DE73E7 /* DDCurlConnection.m */,
+				556F62A20C885EA100DE73E7 /* DDCurlEasy.h */,
+				556F62A30C885EA100DE73E7 /* DDCurlEasy.m */,
+				556F62A40C885EA100DE73E7 /* DDCurlMultipartForm.h */,
+				556F62A50C885EA100DE73E7 /* DDCurlMultipartForm.m */,
+				556F62A60C885EA100DE73E7 /* DDCurlResponse.h */,
+				556F62A70C885EA100DE73E7 /* DDCurlResponse.m */,
+				556F62A80C885EA100DE73E7 /* DDCurlSlist.h */,
+				556F62A90C885EA100DE73E7 /* DDCurlSlist.m */,
+				556F62AA0C885EA100DE73E7 /* DDExtensions.h */,
+				556F62AB0C885EA100DE73E7 /* DDMutableCurlRequest.h */,
+				556F62AC0C885EA100DE73E7 /* DDMutableCurlRequest.m */,
+				556F62AD0C885EA100DE73E7 /* NSString+DDExtensions.h */,
+				556F62AE0C885EA100DE73E7 /* NSString+DDExtensions.m */,
+			);
+			path = ddcurl;
+			sourceTree = "<group>";
+		};
+		556F63000C88693200DE73E7 /* JRLog */ = {
+			isa = PBXGroup;
+			children = (
+				556F63010C88693200DE73E7 /* JRLog.h */,
+				556F63020C88693200DE73E7 /* JRLog.m */,
+			);
+			path = JRLog;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* ADC Downloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ADC Downloader" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ADC Downloader";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "ADC Downloader";
+			productReference = 8D1107320486CEB800E47090 /* ADC Downloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ADC_Downloader" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ADC Downloader */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* ADC Downloader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				556F62CE0C8864F700DE73E7 /* versions.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				556F5C290C8737C400DE73E7 /* AdcDownloadController.m in Sources */,
+				556F60170C87630800DE73E7 /* ByteSizeFormatter.m in Sources */,
+				556F62AF0C885EA100DE73E7 /* DDCurlConnection.m in Sources */,
+				556F62B00C885EA100DE73E7 /* DDCurlEasy.m in Sources */,
+				556F62B10C885EA100DE73E7 /* DDCurlMultipartForm.m in Sources */,
+				556F62B20C885EA100DE73E7 /* DDCurlResponse.m in Sources */,
+				556F62B30C885EA100DE73E7 /* DDCurlSlist.m in Sources */,
+				556F62B40C885EA100DE73E7 /* DDMutableCurlRequest.m in Sources */,
+				556F62B50C885EA100DE73E7 /* NSString+DDExtensions.m in Sources */,
+				556F63030C88693200DE73E7 /* JRLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "ADC Downloader";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "ADC Downloader";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 556F62CD0C8864F700DE73E7 /* versions.xcconfig */;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 556F62CD0C8864F700DE73E7 /* versions.xcconfig */;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ADC Downloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ADC_Downloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

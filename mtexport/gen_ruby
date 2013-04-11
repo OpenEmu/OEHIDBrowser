@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ragel -R mtexport.rb.rl| rlgen-ruby -l -F1 -o mtexport.rb
+

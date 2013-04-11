@@ -1,0 +1,15 @@
+{
+    IBClasses = (
+        {CLASS = BasicOpenGLView; LANGUAGE = ObjC; SUPERCLASS = DDCustomOpenGLView; }, 
+        {CLASS = DDCustomOpenGLView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {nullAction = id; }; 
+            CLASS = MyController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mView = BasicOpenGLView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

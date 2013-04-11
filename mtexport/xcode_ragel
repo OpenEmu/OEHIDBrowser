@@ -1,0 +1,11 @@
+#!/bin/sh
+
+RAGEL=/opt/local/bin/ragel
+RLCODEGEN=/opt/local/bin/rlgen-cd
+RLGEN_DOT=/opt/local/bin/rlgen-dot
+DOT=/opt/local/bin/dot
+
+${RAGEL} -C -o ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.ragel ${INPUT_FILE_PATH} || exit
+${RLCODEGEN} -G2 -o ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE} ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.ragel || exit
+${RLGEN_DOT} -p ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.ragel > ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.dot
+${DOT} -Tpng ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.dot > ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.png

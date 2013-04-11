@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CIPlugInFilterList</key>
+	<dict>
+		<key>DDScale2xFilter</key>
+		<dict>
+			<key>CIFilterAttributes</key>
+			<dict>
+				<key>CIAttributeFilterCategories</key>
+				<array>
+					<string>CICategoryGeometryAdjustment</string>
+					<string>CICategoryVideo</string>
+					<string>CICategoryStillImage</string>
+				</array>
+				<key>CIAttributeFilterDisplayName</key>
+				<string>Scale2x</string>
+				<key>CIInputs</key>
+				<array>
+					<dict>
+						<key>CIAttributeClass</key>
+						<string>CIImage</string>
+						<key>CIAttributeDisplayName</key>
+						<string>inputImage</string>
+						<key>CIAttributeName</key>
+						<string>inputImage</string>
+					</dict>
+				</array>
+			</dict>
+			<key>CIFilterClass</key>
+			<string>DDScale2xFilter</string>
+			<key>CIHasCustomInterface</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>CIPlugInVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

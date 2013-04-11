@@ -1,0 +1,55 @@
+AUTHOR: dave
+TITLE: Fixing Movable Type's Permalink URLs
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: __default__
+ALLOW PINGS: 0
+PRIMARY CATEGORY: Tech
+CATEGORY: Tech
+
+DATE: 09/24/2003 11:36:13 PM
+-----
+BODY:
+Movable Type's permalinks, ironically, are <a href="http://mar.anomy.net/entry/2003/06/09/13.28.59/">not really permanent</a>.  So I decided to correct this problem.
+-----
+EXTENDED BODY:
+Since I am not the first to think about this problem, I'll point you to these two references: <a href="http://mar.anomy.net/entry/2003/06/22/17.15.00/">Howto: Future-proof URLs in Movable Type</a> and <a href="http://diveintomark.org/archives/2003/08/15/slugs">Cruft-free URLs in Movable Type</a>
+
+I had two goals for the permalinks:
+
+<ol>
+<li>No file extensions.  This allows the backend to be updated from, say, plain HTML to PHP or JSP.</li>
+<li>The MT blog ID cannot be used.  This is an internal ID that is not part of the import/export process.  Thus it is <b>not</b> permanent and should be avoided.</li>
+</ol>
+
+I'll start with removing the blog ID.  Lemme start off by saying that I am surprised MT uses the blog ID by default.  It is a major database design faux pax to expose an internal, auto-generated database ID outside the database.  As an internal ID, it should stay there.  So if the blog ID cannot be used, what can be?  Something that is part of the blog that is exported is best.  One part is the posting date.  Since the date should not change once the blog is posted, this is permanent.  But URLs using the date look like <code>.../2003/06/22/17.15.00/</code> and have too many numbers for me.  And ideally the URL should indicate something about the page.  With the date only, the URL is not descriptive enough.
+
+So, another good part of the blog is the title.  Again, this should not change once the blog is posted.  And using the title would provide a descriptive URL.  It is easy to setup MT to use the title in the permalink.  The only problem, is that the title can be long, resulting in URLs like <code>.../2003/09/21/some_really_long_entry_title/</code>.
+
+So how can the permalink be shortend?  Mark has an answer: <a href="http://diveintomark.org/archives/2003/08/15/slugs">use the keyword field</a>.  This is a great idea since the keyword field is only used for searches and is not displayed anywhere.  One problem, though, is <a href="http://www.brainstormsandraves.com/archives/2003/08/12/movable_type_entry_url_choices/">you cannot use the keyword feature of MT as it was intended</a>.  My idea to get around this problem is to use <b>part</b> of the keyword field for the title, but leave the rest open to legitimate keywords.
+
+I decided to use square brackets in the keyword field to denote the title.  The rest is not used.  For example if the keyword field is "[some title] faq movable type", then "some title" will be used as the entry title.  The only problem here is that there is no standard Movable Type tag to do this, so I decided to create a <code>&lt;$MTEntryShortTitle$&gt;</code> tag with  <a href="http://www.dribin.org/dave/software/movabletype/">my own plug-in</a>.  Since I was writing my own tag, I decided to make it a little fancier.  I decided to have it return the shortened keword title, if it existed, otherwise return the full entry title.  This means the URL will be the entry title by default, but it can be overridden in the keyword field.  I think this provides the flexibility I need, while providing nice URLs.
+
+So on to removing the file extension.  The best way, IMHO, is to use a directory index.  In Apache, this typically means using a file named <code>index.html</code>.  Then in the URL, you can leave off the <code>index.html</code> and Apache will find it automatically.  The benefit of this is that Apache can be configured to look for different index files, such as <code>index.php</code> or <code>index.jsp</code>.  But Apache does all this behind the scenes and the URL need not change.
+
+Unfortunately, MT does not provide a good method to use index files in this manner.  <a href="http://mar.anomy.net/entry/2003/06/22/17.15.00/">M·r</a> decided to put <code>index.html</code> into the file template, and then remove it from all the URLs with regular expressions.  I decided to take the opposite approach by leaving off <code>index.html</code> but have MT add this when it creates the files.  I'll get to the details in a second, but I want to go over the MT configuration first.
+
+To change the permalink URLs, you need to edit the individual archive file template.  This is under the "Weblog Config" section and the "Archiving" subsection.  I use the following as the individual archive file template:
+
+<code><$MTArchiveDate format="%Y/%m/%d"$>/<$MTEntryShortTitle dirify="1"$>/</code>
+
+In english, this says, use the year, month, and day, followed by the short title (as described above).  It's important that it ends in a slash as this will signify Apache to use a directory index.
+
+Now we need to get MT to actually work with this configuration.  By default, MT will give you an error because the template results in a directory, not a file.  So I modified <code>MT.pm</code> to detect this.  If it trys to write to a directory, it will first append <code>index.html</code>.  See <a href="http://www.dribin.org/dave/software/movabletype/">this page</a> for a patch to <code>MT.pm</code>.
+
+So that does it.  I now have future-proof, cruft-free, descriptive permalink URLs.
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+[permalink urls]
+-----
+
+
+--------

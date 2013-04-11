@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>QLGenerator</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.objective-c-source</string>
+				<string>public.c-source</string>
+                <string>public.c-plus-plus-source</string>
+                <string>public.objective-c-plus-plus-source</string>
+				<string>public.c-header</string>
+                <string>public.c-plus-plus-header</string>
+                <string>public.assembly-source</string>
+                <string>public.python-script</string>
+                <string>public.perl-script</string>
+                <string>com.sun.java-source</string>
+                <string>public.shell-script</string>
+                <string>com.netscape.javascript-source</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+        <string>org.dribin.dave.QLEnscript</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>${CURRENT_PROJECT_VERSION}</string>
+    <key>CFBundleShortVersionString</key>
+    <string>${CURRENT_MARKETING_VERSION}</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>C3A9D1A5-3C62-45DF-A017-B538C51B5278</key>
+		<string>QuickLookGeneratorPluginFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>5E2D9680-5022-40FA-B806-43349622E5B9</key>
+		<array>
+			<string>C3A9D1A5-3C62-45DF-A017-B538C51B5278</string>
+		</array>
+	</dict>
+	<key>CFPlugInUnloadFunction</key>
+	<string></string>
+    <!-- Change following property to <true/> if the generators supports
+         multiple concurrent requests -->
+    <key>QLSupportsConcurrentRequests</key>
+    <false/>
+    <!-- Change following property to <true/> if the generators needs
+         to be run on main thread -->
+    <key>QLNeedsToBeRunInMainThread</key>
+    <true/>
+    <!-- Change following property to indicate the minimum useful size for a thumbnail the generator
+     can produce. If your generator is fast enough, you can remove the minimum size so to appear in lists -->
+    <key>QLThumbnailMinimumSize</key>
+    <real>17</real>
+    <!-- Change following properites to indicate the preview size to use if preview generation takes too long -->
+    <key>QLPreviewWidth</key>
+    <real>800</real>
+    <key>QLPreviewHeight</key>
+    <real>800</real>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {bounceInPattern = id; bounceSelectedVictims = id; }; 
+            CLASS = BouncerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mVictimsController = NSArrayController; mVictimsTable = NSTableView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = BouncerView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mController = BouncerAppDelegate; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                clearPlaybackQueue = id; 
+                openPlayback = id; 
+                recordPlayback = id; 
+                savePlayback = id; 
+                startPlayback = id; 
+                stopPlayback = id; 
+            }; 
+            CLASS = InteractiveController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mBouncerView = BouncerView; mController = BouncerController; }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

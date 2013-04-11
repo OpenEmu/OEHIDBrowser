@@ -1,0 +1,82 @@
+vec4 E0(vec4 B, vec4 D, vec4 E, vec4 F, vec4 H)
+{
+    // E0 = D == B && B != F && D != H ? D : E;
+    vec4 result = D;
+    result = D == B? result : E;
+    result = B != F? result : E;
+    result = D != H? result : E;
+    return result;
+}
+
+vec4 E1(vec4 B, vec4 D, vec4 E, vec4 F, vec4 H)
+{
+    // E1 = B == F && B != D && F != H ? F : E;
+    vec4 result = F;
+    result = B == F? result : E;
+    result = B != D? result : E;
+    result = F != H? result : E;
+    return result;
+}
+
+vec4 E2(vec4 B, vec4 D, vec4 E, vec4 F, vec4 H)
+{
+    // E2 = D == H && D != B && H != F ? D : E;
+    vec4 result = D;
+    result = D == H? result : E;
+    result = D != B? result : E;
+    result = H != F? result : E;
+    return result;
+}
+
+vec4 E3(vec4 B, vec4 D, vec4 E, vec4 F, vec4 H)
+{
+    // E3 = H == F && D != H && B != F ? F : E;
+    vec4 result = F;
+    result = H == F? result : E;
+    result = D != H? result : E;
+    result = B != F? result : E;
+    return result;
+}
+
+int modulo(float x, float d)
+{
+	return int(x) - int(x/d)*int(d);
+}
+
+kernel vec4 scale2x(sampler src)
+{
+    float scale = 2.0;
+    vec2 xy = samplerCoord(src);
+    xy /= scale;
+
+    // vec4 A = sample(src, xy + vec2(-1.0, -1.0));
+    vec4 B = sample(src, xy + vec2( 0.0, -1.0));
+    // vec4 C = sample(src, xy + vec2( 1.0, -1.0));
+
+    vec4 D = sample(src, xy + vec2(-1.0, 0.0));
+    vec4 E = sample(src, xy + vec2( 0.0, 0.0));
+    vec4 F = sample(src, xy + vec2( 1.0, 0.0));
+
+    // vec4 G = sample(src, xy + vec2(-1.0, 1.0));
+    vec4 H = sample(src, xy + vec2( 0.0, 1.0));
+    // vec4 I = sample(src, xy + vec2( 1.0, 1.0));
+    
+    vec4 e0 = E0(B, D, E, F, H);
+    vec4 e1 = E1(B, D, E, F, H);
+    vec4 e2 = E2(B, D, E, F, H);
+    vec4 e3 = E3(B, D, E, F, H);
+    
+    vec2 d = destCoord();
+    int col = modulo(d.x, scale);
+    int row = modulo(d.y, scale);
+    int i = col + 2*row;
+    
+    vec4 t = e0;
+    t = (i == 1? e1 : t);
+    t = (i == 2? e2 : t);
+    t = (i == 3? e3 : t);
+
+    // t = sample(src, samplerCoord(src));
+
+    return t;
+}

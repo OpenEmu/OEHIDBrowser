@@ -1,0 +1,67 @@
+=head1 NAME
+
+nsurl - Fetch URLs using the Objective-C URL loading system
+
+=head1 SYNOPSIS
+
+B<nsurl> [OPTION] I<url>
+
+=head1 DESCRIPTION
+
+B<nsurl> fetchs URLs using the Objective-C URL loading system, i.e.
+B<NSURLConnection>.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-u>, B<--username> I<USERNAME>
+
+Use I<USERNAME> if requested for authentication.
+
+=item B<-p>, B<--password> I<PASSWORD>
+
+Use I<PASSWORD> if requested for authentication.
+
+=item B<-H>, B<--header> I<HEADER>
+
+Sets the HTTP header. I<HEADER> is formatted like I<NAME: VALUE>, for example,
+B<Accept: applcation/xml>.
+
+This option can be used multiple times to add/replace/remove multiple headers.
+
+=item B<-A>, B<--add-header> I<HEADER>
+
+Adds the HTTP header. I<HEADER> is formatted like I<NAME: VALUE>, for example,
+B<Accept: applcation/xml>. This option provides the ability to add values to
+header fields incrementally.
+
+=item B<-r>, B<--redirect>
+
+Follow HTTP 301/302 redirects.  By default, redirects are not followed.
+
+=item B<--debug>
+
+Print debugging information.
+
+=item B<--version>
+
+Print version and exit.
+
+=item B<-h>, B<--help>
+
+Print usage and exit.
+
+=back 4
+
+=head1 SEE ALSO
+
+curl(1), wget(1)
+
+URL Loading System:
+L<http://developer.apple.com/documentation/Cocoa/Conceptual/URLLoadingSystem/index.html>
+
+=head1 AUTHOR
+
+Dave Dribin is the main author. Dave originally wrote it as a test tool while
+consulting for JamLab, L<http://www.jamlab.com/>.

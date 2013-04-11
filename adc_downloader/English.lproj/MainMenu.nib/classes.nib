@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {cancel = id; download = id; }; 
+            CLASS = AdcDownloadController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mAccessoryView = NSView; mProgressBar = NSProgressIndicator; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

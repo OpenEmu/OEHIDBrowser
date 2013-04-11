@@ -1,0 +1,3 @@
+CURRENT_MARKETING_VERSION = 1.0
+// Marketing version encoded as: MMmmb.bs.rr
+CURRENT_PROJECT_VERSION = 01000.00.00

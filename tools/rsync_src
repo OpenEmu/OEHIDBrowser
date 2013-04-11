@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rsync -av --delete-after --exclude=/build --exclude=/scratch \
+  --cvs-exclude --delete-excluded . "$1"

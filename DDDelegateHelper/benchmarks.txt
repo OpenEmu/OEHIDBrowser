@@ -1,0 +1,51 @@
+Run: 2007-01-18
+MacBook Pro, 2.33 GHz Core 2 Duo
+--------------------------------
+
+Delegate option 1: inline respondsToSelector
+Total time: 3.326362 for 100000000 invocations, Mi/s: 30.062874
+Total time: 3.319262 for 100000000 invocations, Mi/s: 30.127178
+Total time: 3.325885 for 100000000 invocations, Mi/s: 30.067186
+Avg: 30.1 Mi/s, 2.4x slower than option 4
+
+
+Delegate option 2: separate respondsToSelector
+Total time: 4.125683 for 100000000 invocations, Mi/s: 24.238413
+Total time: 4.116356 for 100000000 invocations, Mi/s: 24.293331
+Total time: 4.114906 for 100000000 invocations, Mi/s: 24.301891
+Total time: 4.106339 for 100000000 invocations, Mi/s: 24.352592
+Avg: 24.3 Mi/s, 2.9x slower than option 4
+
+
+Delegate option 3: delegate helper
+Total time: 8.017758 for 10000000 invocations, Mi/s: 1.247231
+Total time: 7.963328 for 10000000 invocations, Mi/s: 1.255756
+Total time: 7.998646 for 10000000 invocations, Mi/s: 1.250212
+Total time: 7.970756 for 10000000 invocations, Mi/s: 1.254586
+Avg: 1.3 Mi/s, 54.8x slower than option 4
+
+
+Delegate option 4: ivar cache
+Total time: 1.403296 for 100000000 invocations, Mi/s: 71.260803
+Total time: 1.401688 for 100000000 invocations, Mi/s: 71.342552
+Total time: 1.401858 for 100000000 invocations, Mi/s: 71.333900
+Total time: 1.409716 for 100000000 invocations, Mi/s: 70.936272
+Avg:  71.2 Mi/s
+
+Run: 2007-01-25
+MacBook Pro, 2.33 GHz Core 2 Duo
+--------------------------------
+
+Delegate option 5: MDelegateManager
+Total time: 14.990698 for 10000000 invocations, Mi/s: 0.667080
+Total time: 14.775730 for 10000000 invocations, Mi/s: 0.676786
+Total time: 14.792133 for 10000000 invocations, Mi/s: 0.676035
+Total time: 14.811392 for 10000000 invocations, Mi/s: 0.675156
+Avg: 0.673 Mi/s, 105.8x slower than option 4
+
+Delegate option 7: SelectorMap
+Total time: 2.221540 for 100000000 invocations, Mi/s: 45.013821
+Total time: 2.223064 for 100000000 invocations, Mi/s: 44.982960
+Total time: 2.223823 for 100000000 invocations, Mi/s: 44.967609
+Total time: 2.235671 for 100000000 invocations, Mi/s: 44.729301
+Avg: 45.0 Mi/s, 1.58x slower than option 4

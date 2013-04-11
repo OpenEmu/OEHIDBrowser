@@ -1,0 +1,111 @@
+#!/usr/bin/env ruby
+$VERBOSE = true
+
+require 'fileutils'
+require 'pathname'
+
+class Archiver
+  attr :archive, :output_directory
+  
+  def initialize(archive)
+    @archive = Pathname.new(archive).realpath.to_s
+    @output_directory = File.join(Dir.pwd, "Unpack-#{Process.pid}")
+  end
+
+  def extract_with_progress
+    Dir.mkdir @output_directory if !File.directory?(@output_directory)
+    old_pwd = Dir.pwd
+    Dir.chdir @output_directory
+    total_size = File.size(@archive)
+    bytes_read = 0;
+    cmd = IO.popen(extract_command_for_stdin, "w")
+    cmd2 = IO.popen("cat > /tmp/foo", "w")
+    File.open(@archive, "rb") do |f|
+      while bytes = f.read(1024*32) do
+        # puts "Bytes read: " + bytes.size.to_s
+        bytes_read += bytes.size
+        cmd2.write(bytes)
+        cmd.write(bytes)
+        printf "\r%2.0f%%", (bytes_read*100.0/total_size)
+        $stdout.flush
+      end
+      puts
+    end
+    cmd2.close
+    cmd.close
+    Dir.chdir old_pwd
+    
+    files = Dir.glob(File.join(@output_directory, "*"))
+    p files
+    if (files.length == 1)
+      pathname = Pathname.new(files[0])
+      basename = pathname.basename
+      new_name = File.join(pathname.parent.parent, basename)
+      puts "New name: " + new_name
+      pathname.rename(new_name)
+      FileUtils.rmtree(@output_directory)
+    end
+    FileUtils.rmtree(@output_directory)
+  end
+end
+
+class TarGzArchiver < Archiver
+  def self.can_handle? (archive)
+    return true if archive =~ /\.tar\.gz$|\.tgz$/
+    return false
+  end
+  
+  def archive_without_extension
+    return @archive.sub(/\.tar\.gz$|\.tgz$/, '')
+  end
+  
+  def extract_command_for_stdin
+    return "tar -zxf -"
+  end
+end
+
+class TarBz2Archiver < Archiver
+  EXTENSION_REGEXP = /\.tar\.bz2$|\.tbz2$|\.tbz$/
+  def self.can_handle? (archive)
+    return true if archive =~  EXTENSION_REGEXP
+    return false
+  end
+
+  def archive_without_extension
+    return @archive.sub(EXTENSION_REGEXP, '')
+  end
+  
+  def extract_command_for_stdin
+    return "tar -jxf -"
+  end
+end
+
+class JarArchiver < Archiver
+  EXTENSION_REGEXP = /\.jar$/
+  def self.can_handle? (archive)
+    return true if archive =~  EXTENSION_REGEXP
+    return false
+  end
+
+  def archive_without_extension
+    return @archive.sub(EXTENSION_REGEXP, '')
+  end
+  
+  def extract_command_for_stdin
+    return "jar -x"
+#    return "cat > /tmp/foo"
+  end
+end
+
+archive = ARGV[0] || "/tmp/mono-1.1.12.1.tar.gz"
+
+archivers = [TarGzArchiver, TarBz2Archiver, JarArchiver]
+
+archiver_class = archivers.find {|a| a.can_handle?(archive) }
+if (archiver_class.nil?)
+  puts "Could not handle #{archive}"
+  exit 1
+end
+
+archiver = archiver_class.new(archive)
+archiver.extract_with_progress

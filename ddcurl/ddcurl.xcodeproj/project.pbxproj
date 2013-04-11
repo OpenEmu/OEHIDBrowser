@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		551908F20C19B83100169EDC /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 551908F10C19B83100169EDC /* libssl.dylib */; };
+		551909060C19B9A600169EDC /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 551909050C19B9A600169EDC /* libcrypto.dylib */; };
+		5519090C0C19B9BB00169EDC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5519090B0C19B9BB00169EDC /* Security.framework */; };
+		5519E9B10C0DC64200169EDC /* DDCurlCliApp.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519E9AF0C0DC64200169EDC /* DDCurlCliApp.h */; };
+		5519E9B20C0DC64200169EDC /* DDCurlCliApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519E9B00C0DC64200169EDC /* DDCurlCliApp.m */; };
+		5519E9D50C0DC99900169EDC /* DDCurlEasy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519E9D30C0DC99900169EDC /* DDCurlEasy.h */; };
+		5519E9D60C0DC99900169EDC /* DDCurlEasy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519E9D40C0DC99900169EDC /* DDCurlEasy.m */; };
+		5519E9DB0C0DCB5D00169EDC /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5519E9DA0C0DCB5D00169EDC /* libcurl.dylib */; };
+		5519EAA10C0DD48300169EDC /* DDMutableCurlRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519EA9F0C0DD48300169EDC /* DDMutableCurlRequest.h */; };
+		5519EAA20C0DD48300169EDC /* DDMutableCurlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519EAA00C0DD48300169EDC /* DDMutableCurlRequest.m */; };
+		5519EAA50C0DD4B900169EDC /* DDCurlConnection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519EAA30C0DD4B900169EDC /* DDCurlConnection.h */; };
+		5519EAA60C0DD4B900169EDC /* DDCurlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519EAA40C0DD4B900169EDC /* DDCurlConnection.m */; };
+		5519EB4C0C0DD94600169EDC /* DDCurl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519EB4B0C0DD94600169EDC /* DDCurl.h */; };
+		5519EBFF0C0DDD8500169EDC /* DDCurlResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519EBFD0C0DDD8500169EDC /* DDCurlResponse.h */; };
+		5519EC000C0DDD8500169EDC /* DDCurlResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519EBFE0C0DDD8500169EDC /* DDCurlResponse.m */; };
+		5519EF3F0C0DF57700169EDC /* DDCurlMultipartForm.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519EF3D0C0DF57700169EDC /* DDCurlMultipartForm.h */; };
+		5519EF400C0DF57700169EDC /* DDCurlMultipartForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519EF3E0C0DF57700169EDC /* DDCurlMultipartForm.m */; };
+		5519F8070C0F51C100169EDC /* DDCurlSlist.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519F8050C0F51C100169EDC /* DDCurlSlist.h */; };
+		5519F8080C0F51C100169EDC /* DDCurlSlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519F8060C0F51C100169EDC /* DDCurlSlist.m */; };
+		5519FCCE0C10649C00169EDC /* NSString+DDExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519FCCC0C10649C00169EDC /* NSString+DDExtensions.h */; };
+		5519FCCF0C10649C00169EDC /* NSString+DDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5519FCCD0C10649C00169EDC /* NSString+DDExtensions.m */; };
+		5519FCD10C10651600169EDC /* DDExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5519FCD00C10651600169EDC /* DDExtensions.h */; };
+		5519FD720C10655A00169EDC /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5519FD710C10655A00169EDC /* ApplicationServices.framework */; };
+		55CCE4F70C11C93E00FA06C6 /* DDCliApplication.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55CCE4F00C11C93E00FA06C6 /* DDCliApplication.h */; };
+		55CCE4F80C11C93E00FA06C6 /* DDCliApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE4F10C11C93E00FA06C6 /* DDCliApplication.m */; };
+		55CCE4F90C11C93E00FA06C6 /* DDCliUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55CCE4F20C11C93E00FA06C6 /* DDCliUtil.h */; };
+		55CCE4FA0C11C93E00FA06C6 /* DDCliUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE4F30C11C93E00FA06C6 /* DDCliUtil.m */; };
+		55CCE4FB0C11C93E00FA06C6 /* DDCommandLineInterface.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55CCE4F40C11C93E00FA06C6 /* DDCommandLineInterface.h */; };
+		55CCE4FC0C11C93E00FA06C6 /* DDGetoptLong.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55CCE4F50C11C93E00FA06C6 /* DDGetoptLong.h */; };
+		55CCE4FD0C11C93E00FA06C6 /* DDGetoptLong.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE4F60C11C93E00FA06C6 /* DDGetoptLong.m */; };
+		8DD76F9A0486AA7600D96B5E /* ddcurl.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* ddcurl.m */; settings = {ATTRIBUTES = (); }; };
+		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		8DD76F9F0486AA7600D96B5E /* ddcurl.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* ddcurl.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F9F0486AA7600D96B5E /* ddcurl.1 in CopyFiles */,
+				5519E9B10C0DC64200169EDC /* DDCurlCliApp.h in CopyFiles */,
+				5519E9D50C0DC99900169EDC /* DDCurlEasy.h in CopyFiles */,
+				5519EAA10C0DD48300169EDC /* DDMutableCurlRequest.h in CopyFiles */,
+				5519EAA50C0DD4B900169EDC /* DDCurlConnection.h in CopyFiles */,
+				5519EB4C0C0DD94600169EDC /* DDCurl.h in CopyFiles */,
+				5519EBFF0C0DDD8500169EDC /* DDCurlResponse.h in CopyFiles */,
+				5519EF3F0C0DF57700169EDC /* DDCurlMultipartForm.h in CopyFiles */,
+				5519F8070C0F51C100169EDC /* DDCurlSlist.h in CopyFiles */,
+				5519FCCE0C10649C00169EDC /* NSString+DDExtensions.h in CopyFiles */,
+				5519FCD10C10651600169EDC /* DDExtensions.h in CopyFiles */,
+				55CCE4F70C11C93E00FA06C6 /* DDCliApplication.h in CopyFiles */,
+				55CCE4F90C11C93E00FA06C6 /* DDCliUtil.h in CopyFiles */,
+				55CCE4FB0C11C93E00FA06C6 /* DDCommandLineInterface.h in CopyFiles */,
+				55CCE4FC0C11C93E00FA06C6 /* DDGetoptLong.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* ddcurl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ddcurl.m; sourceTree = "<group>"; };
+		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32A70AAB03705E1F00C91783 /* ddcurl_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ddcurl_Prefix.pch; sourceTree = "<group>"; };
+		551908F10C19B83100169EDC /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = /usr/lib/libssl.dylib; sourceTree = "<absolute>"; };
+		551909050C19B9A600169EDC /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
+		5519090B0C19B9BB00169EDC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		5519E9AF0C0DC64200169EDC /* DDCurlCliApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurlCliApp.h; sourceTree = "<group>"; };
+		5519E9B00C0DC64200169EDC /* DDCurlCliApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurlCliApp.m; sourceTree = "<group>"; };
+		5519E9D30C0DC99900169EDC /* DDCurlEasy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurlEasy.h; sourceTree = "<group>"; };
+		5519E9D40C0DC99900169EDC /* DDCurlEasy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurlEasy.m; sourceTree = "<group>"; };
+		5519E9DA0C0DCB5D00169EDC /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = /usr/lib/libcurl.dylib; sourceTree = "<absolute>"; };
+		5519EA9F0C0DD48300169EDC /* DDMutableCurlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMutableCurlRequest.h; sourceTree = "<group>"; };
+		5519EAA00C0DD48300169EDC /* DDMutableCurlRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMutableCurlRequest.m; sourceTree = "<group>"; };
+		5519EAA30C0DD4B900169EDC /* DDCurlConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurlConnection.h; sourceTree = "<group>"; };
+		5519EAA40C0DD4B900169EDC /* DDCurlConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurlConnection.m; sourceTree = "<group>"; };
+		5519EB4B0C0DD94600169EDC /* DDCurl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurl.h; sourceTree = "<group>"; };
+		5519EBFD0C0DDD8500169EDC /* DDCurlResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurlResponse.h; sourceTree = "<group>"; };
+		5519EBFE0C0DDD8500169EDC /* DDCurlResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurlResponse.m; sourceTree = "<group>"; };
+		5519EF3D0C0DF57700169EDC /* DDCurlMultipartForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCurlMultipartForm.h; sourceTree = "<group>"; };
+		5519EF3E0C0DF57700169EDC /* DDCurlMultipartForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCurlMultipartForm.m; sourceTree = "<group>"; };
+		5519F8050C0F51C100169EDC /* DDCurlSlist.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCurlSlist.h; sourceTree = "<group>"; };
+		5519F8060C0F51C100169EDC /* DDCurlSlist.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCurlSlist.m; sourceTree = "<group>"; };
+		5519FCCC0C10649C00169EDC /* NSString+DDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDExtensions.h"; sourceTree = "<group>"; };
+		5519FCCD0C10649C00169EDC /* NSString+DDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDExtensions.m"; sourceTree = "<group>"; };
+		5519FCD00C10651600169EDC /* DDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExtensions.h; sourceTree = "<group>"; };
+		5519FD710C10655A00169EDC /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		55CCE4F00C11C93E00FA06C6 /* DDCliApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCliApplication.h; sourceTree = "<group>"; };
+		55CCE4F10C11C93E00FA06C6 /* DDCliApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCliApplication.m; sourceTree = "<group>"; };
+		55CCE4F20C11C93E00FA06C6 /* DDCliUtil.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCliUtil.h; sourceTree = "<group>"; };
+		55CCE4F30C11C93E00FA06C6 /* DDCliUtil.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDCliUtil.m; sourceTree = "<group>"; };
+		55CCE4F40C11C93E00FA06C6 /* DDCommandLineInterface.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDCommandLineInterface.h; sourceTree = "<group>"; };
+		55CCE4F50C11C93E00FA06C6 /* DDGetoptLong.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DDGetoptLong.h; sourceTree = "<group>"; };
+		55CCE4F60C11C93E00FA06C6 /* DDGetoptLong.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DDGetoptLong.m; sourceTree = "<group>"; };
+		8DD76FA10486AA7600D96B5E /* ddcurl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ddcurl; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859EA3029092ED04C91782 /* ddcurl.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ddcurl.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+				5519E9DB0C0DCB5D00169EDC /* libcurl.dylib in Frameworks */,
+				5519FD720C10655A00169EDC /* ApplicationServices.framework in Frameworks */,
+				551908F20C19B83100169EDC /* libssl.dylib in Frameworks */,
+				551909060C19B9A600169EDC /* libcrypto.dylib in Frameworks */,
+				5519090C0C19B9BB00169EDC /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* ddcurl */ = {
+			isa = PBXGroup;
+			children = (
+				5519E9D20C0DC97100169EDC /* lib */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				55CCE4EE0C11C93E00FA06C6 /* vendor */,
+				C6859EA2029092E104C91782 /* Documentation */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = ddcurl;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				32A70AAB03705E1F00C91783 /* ddcurl_Prefix.pch */,
+				08FB7796FE84155DC02AAC07 /* ddcurl.m */,
+				5519E9AF0C0DC64200169EDC /* DDCurlCliApp.h */,
+				5519E9B00C0DC64200169EDC /* DDCurlCliApp.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				551909050C19B9A600169EDC /* libcrypto.dylib */,
+				551908F10C19B83100169EDC /* libssl.dylib */,
+				5519E9DA0C0DCB5D00169EDC /* libcurl.dylib */,
+				5519090B0C19B9BB00169EDC /* Security.framework */,
+				5519FD710C10655A00169EDC /* ApplicationServices.framework */,
+				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FA10486AA7600D96B5E /* ddcurl */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5519E9D20C0DC97100169EDC /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5519E9D30C0DC99900169EDC /* DDCurlEasy.h */,
+				5519E9D40C0DC99900169EDC /* DDCurlEasy.m */,
+				5519EF3D0C0DF57700169EDC /* DDCurlMultipartForm.h */,
+				5519EF3E0C0DF57700169EDC /* DDCurlMultipartForm.m */,
+				5519EA9F0C0DD48300169EDC /* DDMutableCurlRequest.h */,
+				5519EAA00C0DD48300169EDC /* DDMutableCurlRequest.m */,
+				5519EBFD0C0DDD8500169EDC /* DDCurlResponse.h */,
+				5519EBFE0C0DDD8500169EDC /* DDCurlResponse.m */,
+				5519EAA30C0DD4B900169EDC /* DDCurlConnection.h */,
+				5519EAA40C0DD4B900169EDC /* DDCurlConnection.m */,
+				5519F8050C0F51C100169EDC /* DDCurlSlist.h */,
+				5519F8060C0F51C100169EDC /* DDCurlSlist.m */,
+				5519EB4B0C0DD94600169EDC /* DDCurl.h */,
+				5519FCCC0C10649C00169EDC /* NSString+DDExtensions.h */,
+				5519FCCD0C10649C00169EDC /* NSString+DDExtensions.m */,
+				5519FCD00C10651600169EDC /* DDExtensions.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		55CCE4EE0C11C93E00FA06C6 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				55CCE4EF0C11C93E00FA06C6 /* ddcli */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		55CCE4EF0C11C93E00FA06C6 /* ddcli */ = {
+			isa = PBXGroup;
+			children = (
+				55CCE4F00C11C93E00FA06C6 /* DDCliApplication.h */,
+				55CCE4F10C11C93E00FA06C6 /* DDCliApplication.m */,
+				55CCE4F20C11C93E00FA06C6 /* DDCliUtil.h */,
+				55CCE4F30C11C93E00FA06C6 /* DDCliUtil.m */,
+				55CCE4F40C11C93E00FA06C6 /* DDCommandLineInterface.h */,
+				55CCE4F50C11C93E00FA06C6 /* DDGetoptLong.h */,
+				55CCE4F60C11C93E00FA06C6 /* DDGetoptLong.m */,
+			);
+			path = ddcli;
+			sourceTree = "<group>";
+		};
+		C6859EA2029092E104C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859EA3029092ED04C91782 /* ddcurl.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F960486AA7600D96B5E /* ddcurl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "ddcurl" */;
+			buildPhases = (
+				8DD76F990486AA7600D96B5E /* Sources */,
+				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+				8DD76F9E0486AA7600D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ddcurl;
+			productInstallPath = "$(HOME)/bin";
+			productName = ddcurl;
+			productReference = 8DD76FA10486AA7600D96B5E /* ddcurl */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "ddcurl" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* ddcurl */;
+			projectDirPath = "";
+			targets = (
+				8DD76F960486AA7600D96B5E /* ddcurl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F990486AA7600D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9A0486AA7600D96B5E /* ddcurl.m in Sources */,
+				5519E9B20C0DC64200169EDC /* DDCurlCliApp.m in Sources */,
+				5519E9D60C0DC99900169EDC /* DDCurlEasy.m in Sources */,
+				5519EAA20C0DD48300169EDC /* DDMutableCurlRequest.m in Sources */,
+				5519EAA60C0DD4B900169EDC /* DDCurlConnection.m in Sources */,
+				5519EC000C0DDD8500169EDC /* DDCurlResponse.m in Sources */,
+				5519EF400C0DF57700169EDC /* DDCurlMultipartForm.m in Sources */,
+				5519F8080C0F51C100169EDC /* DDCurlSlist.m in Sources */,
+				5519FCCF0C10649C00169EDC /* NSString+DDExtensions.m in Sources */,
+				55CCE4F80C11C93E00FA06C6 /* DDCliApplication.m in Sources */,
+				55CCE4FA0C11C93E00FA06C6 /* DDCliUtil.m in Sources */,
+				55CCE4FD0C11C93E00FA06C6 /* DDGetoptLong.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB927508733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ddcurl_Prefix.pch;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = ddcurl;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		1DEB927608733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ddcurl_Prefix.pch;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = ddcurl;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DEB927908733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB927A08733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "ddcurl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927508733DD40010E9CD /* Debug */,
+				1DEB927608733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "ddcurl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927908733DD40010E9CD /* Debug */,
+				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

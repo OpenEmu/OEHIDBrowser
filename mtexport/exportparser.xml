@@ -1,0 +1,72 @@
+<ragel version="5.21" filename="exportparser.rl" lang="Ruby">
+<ragel_def name="foo">
+  <alphtype>char</alphtype>
+  <machine>
+    <action_list length="1">
+      <action id="0" line="7" col="6"><text> res = 1; </text></action>
+    </action_list>
+    <action_table_list length="1">
+      <action_table id="0" length="1">0</action_table>
+    </action_table_list>
+    <start_state>1</start_state>
+    <error_state>0</error_state>
+    <entry_points>
+      <entry name="main">1</entry>
+    </entry_points>
+    <state_list length="8">
+      <state id="0">
+      <trans_list length="0">
+      </trans_list>
+      </state>
+
+      <state id="1">
+      <trans_list length="2">
+        <t>98 98 2 x</t>
+        <t>102 102 5 x</t>
+      </trans_list>
+      </state>
+
+      <state id="2">
+      <trans_list length="1">
+        <t>97 97 3 x</t>
+      </trans_list>
+      </state>
+
+      <state id="3">
+      <trans_list length="1">
+        <t>114 114 4 x</t>
+      </trans_list>
+      </state>
+
+      <state id="4">
+      <trans_list length="1">
+        <t>0 0 7 0</t>
+      </trans_list>
+      </state>
+
+      <state id="5">
+      <trans_list length="1">
+        <t>111 111 6 x</t>
+      </trans_list>
+      </state>
+
+      <state id="6">
+      <trans_list length="1">
+        <t>111 111 4 x</t>
+      </trans_list>
+      </state>
+
+      <state id="7" final="t">
+      <trans_list length="0">
+      </trans_list>
+      </state>
+    </state_list>
+  </machine>
+</ragel_def>
+<host line="1" col="1">#!/usr/bin/env ruby
+
+</host>
+<host line="9">
+
+</host>
+</ragel>

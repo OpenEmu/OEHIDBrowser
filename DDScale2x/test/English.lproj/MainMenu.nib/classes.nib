@@ -1,0 +1,14 @@
+{
+    IBClasses = (
+        {CLASS = DDScale2xView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {toggleScale = id; }; 
+            CLASS = MyController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mImageView = NSImageView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
